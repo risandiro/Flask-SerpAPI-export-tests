@@ -49,7 +49,7 @@ Or use a `.env` file (not committed) and `python-dotenv` if you add it — **nev
 python app.py
 ```
 
-Open `http://127.0.0.1:5000`, enter a query, submit — browser should download a JSON file.
+In `app.run(...)`, set **`host="127.0.0.1"`** (or `"localhost"`) so Flask listens only on your machine and matches the URL below. If you use **`host="0.0.0.0"`** (e.g. for **Render.com**), open the service URL your host gives you, not `127.0.0.1`.
 
 For development you can use `debug=True` in `app.run`; use **`debug=False`** for any public deployment.
 
