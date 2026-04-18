@@ -47,19 +47,16 @@ $env:SERPAPI_KEY="your_serpapi_key"
 export SERPAPI_KEY="your_serpapi_key"
 ```
 
-Nebo použijte soubor `.env` (nepatří do repozitáře) a případně `python-dotenv` — **nikdy** necommitujte skutečné klíče.
-
 ## Lokální spuštění
 
 ```bash
 python app.py
 ```
 
-V `app.run(...)` nastavte **`host="127.0.0.1"`** (nebo `"localhost"`), aby Flask naslouchal jen na vašem počítači a sedělo to s URL níže. Pokud použijete **`host="0.0.0.0"`** (např. pro **Render.com**), otevřete URL služby od poskytovatele, ne `127.0.0.1`.
+V `app.run(...)` nastavte **`host="127.0.0.1"`**
 
 Otevřete `http://127.0.0.1:5000`, zadejte dotaz, odešlete — prohlížeč by měl stáhnout JSON soubor.
 
-Pro vývoj můžete v `app.run` použít `debug=True`; u **veřejného nasazení** použijte **`debug=False`**.
 
 ## Testy
 
